@@ -1,0 +1,196 @@
+.main {
+  background-color: cadetblue;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #1c2b2d;
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #1b1b1b;
+  transition: left 0.4s ease;
+  z-index: 1;
+}
+
+.sidebar.show {
+  left: 0px;
+}
+.sidebar .text {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  padding-left: 0px;
+}
+
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li a:hover {
+  color: cyan !important;
+  background: #1e1e1e;
+  border-left-color: cyan !important;
+}
+nav ul li a.active {
+  color: cyan !important;
+  background: #1e1e1e;
+  border-left-color: cyan !important;
+}
+
+nav ul ul {
+  position: static;
+  display: none;
+}
+
+nav ul .mg-show-1.show {
+  position: static;
+  display: block;
+}
+
+nav ul .mg-show-2.show {
+  position: static;
+  display: block;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+
+nav ul ul li a {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 80px;
+}
+
+nav ul li a span {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  transform: translateX(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+
+nav ul li a span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.btnn {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+
+.btnn.click {
+  left: 265px;
+}
+
+.btnn span {
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.btnn.click span::before {
+  content: "\f00d";
+}
+.active-cyan-4 input[type="text"] {
+  width: 65%;
+  margin: auto;
+}
+.active-cyan-4 input[type="text"]:focus:not([readonly]) {
+  border: 1px solid #4dd0e1;
+  box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+/***Dashboard***/
+
+.info-container {
+  padding-top: 2.4rem;
+}
+.small-box {
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding: 1rem 1.5rem;
+}
+
+.small-box h3,
+.small-box p {
+  z-index: 5;
+}
+.small-box h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.small-box p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+p {
+  margin: 0 0 10px;
+}
+.small-box .icon {
+  transition: all 0.3s linear;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  z-index: 0;
+  font-size: 90px;
+  color: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.smlBx {
+  background-color: #1f4068;
+  color: white;
+}
+
+.bg-1 {
+  background-color: #f5a25d;
+}
+
+.bg-2 {
+  background-color: #fa7f72;
+}
+
+.bg-3 {
+  background-color: #389393;
+}

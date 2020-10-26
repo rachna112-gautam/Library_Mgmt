@@ -1,0 +1,64 @@
+.bg {
+  min-height: 100vh;
+  background-image: url("./../../assets/books.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #e6d5b8;
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  font-weight: 600;
+}
+h1 small {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.left-part img {
+  height: 90%;
+  width: 90%;
+}
+
+.img-tag {
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.bg-pink {
+  background: #e43f5a;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 3rem;
+  font-family: "Crete Round", serif;
+}
+
+.card-h4 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: "Crete Round", serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  background-color: transparent !important;
+  color: #fff;
+  margin: 2rem;
+  border: none;
+}
+
+.card-footer {
+  border-top: none;
+  padding: 0;
+}
+
+.lg {
+  border: none;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+}

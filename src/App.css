@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.btn-con {
+  position: absolute;
+  right: 10%;
+}
