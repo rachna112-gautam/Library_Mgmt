@@ -22,9 +22,9 @@ class Librarian extends Component {
     }
     return (
       <div className="container-fluid main">
-        <div className="btnn" onClick={toggleBar}>
+        {/* <div className="btnn" onClick={toggleBar}>
           <span className="fa fa-bars"> </span>
-        </div>
+        </div> */}
         <nav className="sidebar">
           <div className="text">Admin Panel</div>
           <ul>

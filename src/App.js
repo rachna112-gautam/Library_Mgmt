@@ -9,6 +9,9 @@ import Librarian from "./component/Librarian/Librarian";
 import Profile from "./component/UserProfile/Profile";
 import AddBook from "./component/Librarian/AddBook";
 import IssueBook from "./component/Librarian/IssueBook";
+import AddUser from "./component/Librarian/AddUser";
+import ViewUsers from "./component/Librarian/ViewUsers";
+import ViewIssuedBooks from "./component/Librarian/ViewIssuedBooks";
 
 function App() {
   return (
@@ -21,6 +24,13 @@ function App() {
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/librarian/add-book" component={AddBook} />
       <Route exact path="/librarian/issue-book" component={IssueBook} />
+      <Route exact path="/librarian/add-user" component={AddUser} />
+      <Route exact path="/librarian/view-users" component={ViewUsers} />
+      <Route
+        exact
+        path="/librarian/view-all-issued-books"
+        component={ViewIssuedBooks}
+      />
     </BrowserRouter>
   );
 }

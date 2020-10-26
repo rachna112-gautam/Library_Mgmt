@@ -31,7 +31,7 @@ class IssueBook extends Component {
               <form>
                 <div className="row jumbotron reg pt-0">
                   <div
-                    class="col-lg-12 login-title"
+                    class="col-lg-12 login-title mb-3"
                     style={{
                       paddingBottom: "1rem",
                       fontSize: "3rem",
@@ -104,7 +104,7 @@ class IssueBook extends Component {
 
                   <div className="col-sm-12 form-group mb-0 float-left">
                     <a
-                      className="btn btn-primary btn-lg  mt-3"
+                      className="btn btn-primary btn-lg float-right mt-3"
                       type="submit"
                       href="#issuebook"
                     >

@@ -153,59 +153,13 @@ class Dashboard extends Component {
                 </ul>
               </div>
               <div class="modal-footer">
-                <button
+                <a
                   type="button"
                   class="btn btn-primary"
-                  data-toggle="modal"
-                  data-target=".book-modal-sm"
+                  href="/librarian/issue-book"
                 >
                   Book
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="modal fade book-modal-sm"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="mySmallModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content  smlBx">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                  Book
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span style={{ color: "white" }} aria-hidden="true">
-                    &times;
-                  </span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group">
-                    <label for="userid">Enter Registered User ID</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userid"
-                      placeholder="User Id"
-                    />
-                  </div>
-
-                  <button type="submit" class="btn btn-primary">
-                    Confirm Booking
-                  </button>
-                </form>
+                </a>
               </div>
             </div>
           </div>
@@ -248,16 +202,13 @@ class Dashboard extends Component {
               <div className="row mb-auto info-container">
                 <div className="col-lg-6 col-md-4 col-xs-6">
                   {" "}
-                  <div
-                    class="small-box bg-2"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-2">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
                       <p>Issue Book</p>
                     </div>
                     <div class="icon">
-                      <Link to="/librarian/issue-book">
+                      <Link className="color-3" to="/librarian/issue-book">
                         {" "}
                         <i class="fa fa-book"></i>
                       </Link>
@@ -266,75 +217,71 @@ class Dashboard extends Component {
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
                   {" "}
-                  <div
-                    class="small-box bg-1"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-1">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
-                      <p>Due Books</p>
+                      <p>Requested Books</p>
                     </div>
                     <div class="icon">
-                      <i class="fa fa-book"></i>
+                      <Link className="color-2 ">
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
                   {" "}
-                  <div
-                    class="small-box bg-3"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-3">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
-                      <p>Manage Users</p>
+                      <p>View All issued books</p>
                     </div>
                     <div class="icon">
-                      <i class="fa fa-users"></i>
+                      <Link
+                        to="/librarian/view-all-issued-books"
+                        className="color-1"
+                      >
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
-                  <div
-                    class="small-box bg-2"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-2">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
                       <p>View Books</p>
                     </div>
                     <div class="icon">
-                      <i class="fa fa-book"></i>
+                      <Link className="color-3">
+                        <i class="fa fa-book"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
-                  <div
-                    class="small-box bg-2"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-2">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
                       <p>Add Book</p>
                     </div>
                     <div class="icon">
-                      <Link to="/librarian/add-book">
+                      <Link className="color-3" to="/librarian/add-book">
                         <i class="fa fa-book"></i>{" "}
                       </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
-                  <div
-                    class="small-box bg-3"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-3">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
                       <p>View Users</p>
                     </div>
                     <div class="icon">
-                      <i class="fa fa-book"></i>
+                      <Link to="/librarian/view-users" className="color-1">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -345,26 +292,23 @@ class Dashboard extends Component {
                       <p>Add User</p>
                     </div>
                     <div class="icon">
-                      <i
-                        class="fa fa-book"
-                        onClick={() => {
-                          return;
-                        }}
-                      ></i>
+                      <Link to="/librarian/add-user" className="color-2">
+                        {" "}
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-4 col-xs-6">
-                  <div
-                    class="small-box bg-2"
-                    ng-click="redirect('https://www.library-management.com/manage-issued-books/')"
-                  >
+                  <div class="small-box bg-2">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
-                      <p>Settings</p>
+                      <p>My Profile</p>
                     </div>
                     <div class="icon">
-                      <i class="fa fa-book"></i>
+                      <Link className="color-3">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>

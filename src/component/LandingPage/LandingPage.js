@@ -16,7 +16,7 @@ class LandingPage extends Component {
                   <div class="card">
                     <img
                       class="card-img-top img-fluid"
-                      src="https://dummyimage.com/400x200/f5a25d/ffffff&text="
+                      src="https://dummyimage.com/400x200/f5a25d/ffffff&text= "
                       alt="admin"
                       width="400"
                     />

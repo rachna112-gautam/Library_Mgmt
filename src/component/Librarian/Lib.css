@@ -194,3 +194,46 @@ p {
 .bg-3 {
   background-color: #389393;
 }
+
+.color-2 {
+  color: #fa7f72;
+  transition: all 0.1s ease;
+}
+.color-2:hover {
+  color: #e66354;
+}
+
+.color-3 {
+  color: #389393;
+  transition: all 0.1s ease;
+}
+.color-3:hover {
+  color: #228080;
+}
+
+.color-1 {
+  color: #f5a25d;
+  transition: all 0.1s ease;
+}
+
+.color-1:hover {
+  color: #e69350;
+}
+
+.table-heading {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.fa-envelope {
+  color: #fff;
+}
+
+.action-btn {
+  background-color: rgb(219, 80, 80);
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
