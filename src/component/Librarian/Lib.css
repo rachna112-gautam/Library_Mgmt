@@ -147,7 +147,9 @@ nav ul li a span.rotate {
   margin-bottom: 20px;
   padding: 1rem 1.5rem;
 }
-
+/* h1 {
+  line-height: 0.6;
+} */
 .small-box h3,
 .small-box p {
   z-index: 5;
@@ -226,7 +228,8 @@ p {
   margin-bottom: 2rem;
 }
 
-.fa-envelope {
+.fa-envelope,
+.fa-reply {
   color: #fff;
 }
 

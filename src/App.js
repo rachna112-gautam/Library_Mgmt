@@ -12,6 +12,8 @@ import IssueBook from "./component/Librarian/IssueBook";
 import AddUser from "./component/Librarian/AddUser";
 import ViewUsers from "./component/Librarian/ViewUsers";
 import ViewIssuedBooks from "./component/Librarian/ViewIssuedBooks";
+import RequestedBook from "./component/Librarian/RequestedBook";
+import ViewAllBooks from "./component/Librarian/ViewAllBooks";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         path="/librarian/view-all-issued-books"
         component={ViewIssuedBooks}
       />
+      <Route exact path="/librarian/requested-book" component={RequestedBook} />
+      <Route exact path="/librarian/view-all-books" component={ViewAllBooks} />
     </BrowserRouter>
   );
 }

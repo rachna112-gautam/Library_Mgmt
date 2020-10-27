@@ -198,7 +198,7 @@ class Dashboard extends Component {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <div className="row mb-auto info-container">
                 <div className="col-lg-6 col-md-4 col-xs-6">
                   {" "}
@@ -208,7 +208,12 @@ class Dashboard extends Component {
                       <p>Issue Book</p>
                     </div>
                     <div class="icon">
-                      <Link className="color-3" to="/librarian/issue-book">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click here"
+                        className="color-3"
+                        to="/librarian/issue-book"
+                      >
                         {" "}
                         <i class="fa fa-book"></i>
                       </Link>
@@ -223,7 +228,12 @@ class Dashboard extends Component {
                       <p>Requested Books</p>
                     </div>
                     <div class="icon">
-                      <Link className="color-2 ">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click here"
+                        to="/librarian/requested-book"
+                        className="color-2 "
+                      >
                         <i class="fa fa-bookmark" aria-hidden="true"></i>
                       </Link>
                     </div>
@@ -233,11 +243,13 @@ class Dashboard extends Component {
                   {" "}
                   <div class="small-box bg-3">
                     <div class="inner">
-                      <h3 class="ng-binding">0</h3>
+                      <h3 class="ng-binding">4</h3>
                       <p>View All issued books</p>
                     </div>
                     <div class="icon">
                       <Link
+                        data-toggle="tooltip"
+                        title="Click to view all issued books"
                         to="/librarian/view-all-issued-books"
                         className="color-1"
                       >
@@ -250,10 +262,15 @@ class Dashboard extends Component {
                   <div class="small-box bg-2">
                     <div class="inner">
                       <h3 class="ng-binding">0</h3>
-                      <p>View Books</p>
+                      <p>View All Books</p>
                     </div>
                     <div class="icon">
-                      <Link className="color-3">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click to view all books"
+                        to="/librarian/view-all-books/"
+                        className="color-3"
+                      >
                         <i class="fa fa-book"></i>
                       </Link>
                     </div>
@@ -266,7 +283,12 @@ class Dashboard extends Component {
                       <p>Add Book</p>
                     </div>
                     <div class="icon">
-                      <Link className="color-3" to="/librarian/add-book">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click to add new book"
+                        className="color-3"
+                        to="/librarian/add-book"
+                      >
                         <i class="fa fa-book"></i>{" "}
                       </Link>
                     </div>
@@ -275,11 +297,16 @@ class Dashboard extends Component {
                 <div className="col-lg-6 col-md-4 col-xs-6">
                   <div class="small-box bg-3">
                     <div class="inner">
-                      <h3 class="ng-binding">0</h3>
+                      <h3 class="ng-binding">10</h3>
                       <p>View Users</p>
                     </div>
                     <div class="icon">
-                      <Link to="/librarian/view-users" className="color-1">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click to view all users"
+                        to="/librarian/view-users"
+                        className="color-1"
+                      >
                         <i class="fa fa-users" aria-hidden="true"></i>
                       </Link>
                     </div>
@@ -292,7 +319,12 @@ class Dashboard extends Component {
                       <p>Add User</p>
                     </div>
                     <div class="icon">
-                      <Link to="/librarian/add-user" className="color-2">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click to add new user"
+                        to="/librarian/add-user"
+                        className="color-2"
+                      >
                         {" "}
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                       </Link>
@@ -306,57 +338,64 @@ class Dashboard extends Component {
                       <p>My Profile</p>
                     </div>
                     <div class="icon">
-                      <Link className="color-3">
+                      <Link
+                        data-toggle="tooltip"
+                        title="Click to view your profile"
+                        className="color-3"
+                      >
                         <i class="fa fa-user" aria-hidden="true"></i>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="col-lg-6">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search book"
-                />
-                <div class="input-group-append">
-                  <button class="btn btn-secondary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
+              <div class="row m-auto info-container">
+                <div className="col-sm-12">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search book"
+                    />
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      id="dtBasicExample"
+                      class="table table-striped table-hover mt-3"
+                      cellspacing="0"
+                      width="100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th class="th-sm">Book ID</th>
+                          <th class="th-sm">Book Name</th>
+                          <th class="th-sm">Availablity</th>
+                        </tr>
+                      </thead>
+                      <tbody>{this.renderTableData()}</tbody>
+                    </table>
+                  </div>
+                  <ReactPaginate
+                    previousLabel={"prev"}
+                    nextLabel={"next"}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={this.state.pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={this.handlePageClick}
+                    containerClassName={"pagination"}
+                    subContainerClassName={"pages pagination"}
+                    activeClassName={"active"}
+                  ></ReactPaginate>
                 </div>
               </div>
-
-              <table
-                id="dtBasicExample"
-                class="table table-striped table-hover mt-3"
-                cellspacing="0"
-                width="100%"
-              >
-                <thead>
-                  <tr>
-                    <th class="th-sm">Book ID</th>
-                    <th class="th-sm">Book Name</th>
-                    <th class="th-sm">Availablity</th>
-                  </tr>
-                </thead>
-                <tbody>{this.renderTableData()}</tbody>
-              </table>
-              <ReactPaginate
-                previousLabel={"prev"}
-                nextLabel={"next"}
-                breakLabel={"..."}
-                breakClassName={"break-me"}
-                pageCount={this.state.pageCount}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-                onPageChange={this.handlePageClick}
-                containerClassName={"pagination"}
-                subContainerClassName={"pages pagination"}
-                activeClassName={"active"}
-              ></ReactPaginate>
             </div>
           </div>
         </div>

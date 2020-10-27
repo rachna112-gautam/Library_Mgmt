@@ -4,8 +4,8 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="container-fluid bg">
-        <div class="container">
-          <div class="row">
+        <div class="container pt-1 ">
+          <div class="row ">
             <div class="col-lg-12 text-center">
               <h3 class="bg-pink">Explore the world of books</h3>
             </div>
@@ -16,9 +16,10 @@ class LandingPage extends Component {
                   <div class="card">
                     <img
                       class="card-img-top img-fluid"
-                      src="https://dummyimage.com/400x200/f5a25d/ffffff&text= "
+                      src="images/library-bg.png"
                       alt="admin"
                       width="400"
+                      style={{ backgroundColor: "#fa7f72" }}
                     />
                     <div class="card-body">
                       <h4 class="card-title card-h4">Admin Login</h4>
@@ -39,9 +40,10 @@ class LandingPage extends Component {
                   <div class="card">
                     <img
                       class="card-img-top img-fluid"
-                      src="https://dummyimage.com/400x200/fa7f72/ffffff&text="
+                      src="images/library-bg.png"
                       alt="registereduser"
                       width="400"
+                      style={{ backgroundColor: "#389393" }}
                     />
                     <div class="card-body">
                       <h4 class="card-title card-h4">Registered User Login</h4>
@@ -62,9 +64,10 @@ class LandingPage extends Component {
                   <div class="card">
                     <img
                       class="card-img-top img-fluid"
-                      src="https://dummyimage.com/400x200/389393/ffffff&text="
+                      src="images/library-bg.png"
                       alt="newuser"
                       width="400"
+                      style={{ backgroundColor: " #f5a25d" }}
                     />
                     <div class="card-body">
                       <h4 class="card-title card-h4">New User</h4>
