@@ -36,6 +36,7 @@ h1 small {
   padding: 1rem 1.5rem;
   font-size: 3rem;
   font-family: "Crete Round", serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .card-h4 {

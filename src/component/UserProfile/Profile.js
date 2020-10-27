@@ -67,12 +67,12 @@ class Proifle extends Component {
       <section className="profile-db">
         <div className="side-nav">
           <div className="sidebar-header">
-            <h2>Profile</h2>
+            <h2>User Panel</h2>
           </div>
 
           <div class="sidebar-user">
             <div class="sidebar-user-img">
-              <img src="images/backgd.png" alt="profile" />
+              <img src="images/images.png" alt="profile" />
             </div>
             <h3>Rachna</h3>
           </div>
@@ -80,27 +80,27 @@ class Proifle extends Component {
             <ul>
               <li>
                 <a href="#read">
-                  <i class="fa fa-user"></i> Books I read
+                  <i class="fa fa-user"></i> Dashboard
                 </a>
               </li>
               <li>
                 <a href="#due">
-                  <i class="fa fa-list-alt"></i> Due Lists
+                  <i class="fa fa-book"></i> View Issued Books
+                </a>
+              </li>{" "}
+              <li>
+                <a href="#liked">
+                  <i class="fa fa-heart"></i> Request Book
                 </a>
               </li>
               <li>
                 <a href="#book">
-                  <i class="fa fa-book"></i> Book
-                </a>
-              </li>
-              <li>
-                <a href="#liked">
-                  <i class="fa fa-heart"></i> Liked
+                  <i class="fa fa-list-alt"></i> Change Password
                 </a>
               </li>
               <li>
                 <a href="#update">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>Update
+                  <i class="fa fa-pencil" aria-hidden="true"></i>Update Profile
                 </a>
               </li>
               <li>
